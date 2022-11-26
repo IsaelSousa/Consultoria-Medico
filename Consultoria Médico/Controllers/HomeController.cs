@@ -1,8 +1,9 @@
-﻿using Consultoria_Médico.Models;
+﻿using ConsultoriaMedico.Command;
+using ConsultoriaMedico.Model;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace Consultoria_Médico.Controllers
+namespace ConsultoriaMedico.Controllers
 {
     public class HomeController : Controller
     {
@@ -23,10 +24,11 @@ namespace Consultoria_Médico.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost()]
+        public bool InsertConsult(PessoaRequestModel people)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            bool result = PessoaDAO.InsertDataPeople(people);
+            return result;
         }
     }
 }

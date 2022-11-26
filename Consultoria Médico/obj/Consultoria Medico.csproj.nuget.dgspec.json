@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\Insfraestrutura.ConsultoriaMedico.csproj": {}
+    "D:\\www\\csharp\\Consultoria Médico\\Consultoria Médico\\Consultoria Medico.csproj": {}
   },
   "projects": {
-    "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\Insfraestrutura.ConsultoriaMedico.csproj": {
+    "D:\\www\\csharp\\Consultoria Médico\\Consultoria Médico\\Consultoria Medico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\Insfraestrutura.ConsultoriaMedico.csproj",
-        "projectName": "Insfraestrutura.ConsultoriaMedico",
-        "projectPath": "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\Insfraestrutura.ConsultoriaMedico.csproj",
+        "projectUniqueName": "D:\\www\\csharp\\Consultoria Médico\\Consultoria Médico\\Consultoria Medico.csproj",
+        "projectName": "Consultoria Medico",
+        "projectPath": "D:\\www\\csharp\\Consultoria Médico\\Consultoria Médico\\Consultoria Medico.csproj",
         "packagesPath": "C:\\Users\\toxic\\.nuget\\packages\\",
-        "outputPath": "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\obj\\",
+        "outputPath": "D:\\www\\csharp\\Consultoria Médico\\Consultoria Médico\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\toxic\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,9 +40,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "System.Data.OleDb": {
+            "Microsoft.AspNetCore.Authentication.Negotiate": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[6.0.10, )"
             }
           },
           "imports": [
@@ -57,6 +57,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

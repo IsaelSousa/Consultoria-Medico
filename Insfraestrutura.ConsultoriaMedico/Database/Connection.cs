@@ -1,28 +1,31 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.OleDb;
+using System.Data;
 
 namespace Insfraestrutura.ConsultoriaMedico.Database
 {
     public static class Connection
     {
-        private static string connectionString = "Server=localhost;Port=5432;User Id=postgres;Password=3641;Database=MedicConsultUnip;";
+        private static string connectionString = "Provider=SQLOLEDB.1;Password=123;Persist Security Info=True;User ID=sa;Initial Catalog=MedicConsult;Data Source=DESKTOP-0Q2AQQM\\SQLEXPRESS";
 
-        static NpgsqlConnection connection;
+        public static OleDbConnection connection;
 
         public static void OpenConnection()
         {
-            connection = new NpgsqlConnection(connectionString);
-            connection.Open();
+            using (OleDbConnection connect = new OleDbConnection(connectionString))
+            {
+                if (connect.State == ConnectionState.Closed)
+                {
+                    connect.Open();
+                }
+            }
         }
 
         public static void CloseConnection()
         {
-            connection.Close();
+            if (connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+            }
         }
 
     }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\Insfraestrutura.ConsultoriaMedico.csproj": {}
+    "D:\\www\\csharp\\Consultoria Médico\\Application.ConsultoriaMedico\\Application.ConsultoriaMedico.csproj": {}
   },
   "projects": {
-    "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\Insfraestrutura.ConsultoriaMedico.csproj": {
+    "D:\\www\\csharp\\Consultoria Médico\\Application.ConsultoriaMedico\\Application.ConsultoriaMedico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\Insfraestrutura.ConsultoriaMedico.csproj",
-        "projectName": "Insfraestrutura.ConsultoriaMedico",
-        "projectPath": "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\Insfraestrutura.ConsultoriaMedico.csproj",
+        "projectUniqueName": "D:\\www\\csharp\\Consultoria Médico\\Application.ConsultoriaMedico\\Application.ConsultoriaMedico.csproj",
+        "projectName": "Application.ConsultoriaMedico",
+        "projectPath": "D:\\www\\csharp\\Consultoria Médico\\Application.ConsultoriaMedico\\Application.ConsultoriaMedico.csproj",
         "packagesPath": "C:\\Users\\toxic\\.nuget\\packages\\",
-        "outputPath": "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\obj\\",
+        "outputPath": "D:\\www\\csharp\\Consultoria Médico\\Application.ConsultoriaMedico\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\toxic\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,12 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "System.Data.OleDb": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

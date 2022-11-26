@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consultoria Médico", "Consultoria Médico\Consultoria Médico.csproj", "{FDF6E1CB-B2FF-4C60-9670-4071D839B908}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsultoriaMedico", "Consultoria Médico\ConsultoriaMedico.csproj", "{FDF6E1CB-B2FF-4C60-9670-4071D839B908}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insfraestrutura.ConsultoriaMedico", "Insfraestrutura.ConsultoriaMedico\Insfraestrutura.ConsultoriaMedico.csproj", "{E443EA51-CD1D-45AE-9A21-29B722012A4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insfraestrutura.ConsultoriaMedico", "Insfraestrutura.ConsultoriaMedico\Insfraestrutura.ConsultoriaMedico.csproj", "{E443EA51-CD1D-45AE-9A21-29B722012A4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

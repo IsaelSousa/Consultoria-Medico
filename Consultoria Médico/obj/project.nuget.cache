@@ -1,14 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "t1tXx7WYiKMTfzt6sNi8ERmkRxMdgJnalAfMSMFdJYKgCs7qZdjtVavhEbVogTICZ3ss6AR3AdF0KTNEkWVRug==",
+  "dgSpecHash": "nYN9Jrgf1AuYzS8mdbbatrS1n4oYyBGtiqFg0J8vva1wYAzVE/rOLCTF/R6PAEy9YCQAPTIHctG7qN8UZhNnow==",
   "success": true,
-  "projectFilePath": "D:\\www\\csharp\\Consultoria Médico\\Consultoria Médico\\Consultoria Médico.csproj",
+  "projectFilePath": "D:\\www\\csharp\\Consultoria Médico\\Consultoria Médico\\ConsultoriaMedico.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\toxic\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\6.0.10\\microsoft.aspnetcore.authentication.negotiate.6.0.10.nupkg.sha512",
     "C:\\Users\\toxic\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\6.0.10\\microsoft.aspnetcore.connections.abstractions.6.0.10.nupkg.sha512",
     "C:\\Users\\toxic\\.nuget\\packages\\microsoft.extensions.features\\6.0.10\\microsoft.extensions.features.6.0.10.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\system.data.oledb\\7.0.0\\system.data.oledb.7.0.0.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\system.diagnostics.performancecounter\\7.0.0\\system.diagnostics.performancecounter.7.0.0.nupkg.sha512",
     "C:\\Users\\toxic\\.nuget\\packages\\system.directoryservices.protocols\\6.0.1\\system.directoryservices.protocols.6.0.1.nupkg.sha512",
-    "C:\\Users\\toxic\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512"
+    "C:\\Users\\toxic\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
