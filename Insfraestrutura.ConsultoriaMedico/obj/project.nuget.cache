@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "FcfFyecAHr/G2cFh8yvlW/kmRZwfeZLzgIto4BHQkhfN5wmiySpmaGyFNHQ+Terq8hGvdUPUWLgKw1ovvn2geQ==",
+  "success": true,
+  "projectFilePath": "D:\\www\\csharp\\Consultoria Médico\\Insfraestrutura.ConsultoriaMedico\\Insfraestrutura.ConsultoriaMedico.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\toxic\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\npgsql.json.net\\7.0.0\\npgsql.json.net.7.0.0.nupkg.sha512",
+    "C:\\Users\\toxic\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
