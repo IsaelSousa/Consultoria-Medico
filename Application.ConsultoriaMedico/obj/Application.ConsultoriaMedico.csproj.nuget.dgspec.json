@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\www\\csharp\\Consultoria Médico\\Infrastructure.ConsultoriaMedico\\Infrastructure.ConsultoriaMedico.csproj": {
+                "projectPath": "D:\\www\\csharp\\Consultoria Médico\\Infrastructure.ConsultoriaMedico\\Infrastructure.ConsultoriaMedico.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -51,12 +55,30 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "D:\\www\\csharp\\Consultoria Médico\\Infrastructure.ConsultoriaMedico\\Infrastructure.ConsultoriaMedico.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\www\\csharp\\Consultoria Médico\\Infrastructure.ConsultoriaMedico\\Infrastructure.ConsultoriaMedico.csproj",
+        "projectName": "Infrastructure.ConsultoriaMedico",
+        "projectPath": "D:\\www\\csharp\\Consultoria Médico\\Infrastructure.ConsultoriaMedico\\Infrastructure.ConsultoriaMedico.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }

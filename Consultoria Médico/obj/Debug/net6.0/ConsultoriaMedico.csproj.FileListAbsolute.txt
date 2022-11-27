@@ -1,0 +1,8 @@
+D:\www\csharp\Consultoria Médico\Consultoria Médico\obj\Debug\net6.0\ConsultoriaMedico.csproj.AssemblyReference.cache
+D:\www\csharp\Consultoria Médico\Consultoria Médico\obj\Debug\net6.0\ConsultoriaMedico.GeneratedMSBuildEditorConfig.editorconfig
+D:\www\csharp\Consultoria Médico\Consultoria Médico\obj\Debug\net6.0\ConsultoriaMedico.AssemblyInfoInputs.cache
+D:\www\csharp\Consultoria Médico\Consultoria Médico\obj\Debug\net6.0\ConsultoriaMedico.AssemblyInfo.cs
+D:\www\csharp\Consultoria Médico\Consultoria Médico\obj\Debug\net6.0\ConsultoriaMedico.csproj.CoreCompileInputs.cache
+D:\www\csharp\Consultoria Médico\Consultoria Médico\obj\Debug\net6.0\ConsultoriaMedico.MvcApplicationPartsAssemblyInfo.cache
+D:\www\csharp\Consultoria Médico\Consultoria Médico\obj\Debug\net6.0\ConsultoriaMedico.RazorAssemblyInfo.cache
+D:\www\csharp\Consultoria Médico\Consultoria Médico\obj\Debug\net6.0\ConsultoriaMedico.RazorAssemblyInfo.cs

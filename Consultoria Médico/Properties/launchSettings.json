@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Consultoria_Médico": {
+    "ConsultoriaMedico": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
