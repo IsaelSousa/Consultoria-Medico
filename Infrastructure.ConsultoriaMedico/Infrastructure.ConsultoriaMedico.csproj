@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{07CC1C77-F7A9-4500-9C58-EBA8A99DD0EC}</ProjectGuid>
+    <ProjectGuid>{D10143EA-77F9-4DFB-A43C-1FC7F5A988F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Infrastructure.ConsultoriaMedico</RootNamespace>
@@ -36,9 +36,6 @@
     <Reference Include="System.Data.OleDb, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.OleDb.7.0.0\lib\net462\System.Data.OleDb.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,14 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repository\ConsultDataRepository.cs" />
     <Compile Include="Model\ConsultDataResponse.cs" />
-    <Compile Include="Model\EnderecoRequestModel.cs" />
-    <Compile Include="Model\PessoaRequestModel.cs" />
-    <Compile Include="Model\PessoaTelefoneRequestModel.cs" />
-    <Compile Include="Model\TelefoneRequestModel.cs" />
-    <Compile Include="Model\TipoTelefoneRequestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ConsultDataRepository.cs" />
     <Compile Include="Repository\ConsultDeleteRepository.cs" />
     <Compile Include="Repository\ConsultInsertRepository.cs" />
     <Compile Include="Repository\ConsultUpdateRepository.cs" />

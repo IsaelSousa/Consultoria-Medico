@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wmNpLdzPWjewDBJgcVWOMdkFdbuE8IeLAwaEHyK1EkQ=",
+  "Source": "ConsultaMedicaApi",
+  "BasePath": "_content/ConsultaMedicaApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

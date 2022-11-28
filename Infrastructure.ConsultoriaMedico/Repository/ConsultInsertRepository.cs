@@ -3,6 +3,7 @@ using Infrastructure.ConsultoriaMedico.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
@@ -14,7 +15,7 @@ namespace Infrastructure.ConsultoriaMedico.Repository
     {
         static string connectionString = Environment.GetEnvironmentVariable("connectionString");
         static OleDbConnection connection;
-        public static bool InsertPeoples(string nome, int cpf, int endereco)
+        public static int InsertPeoples(string nome, int cpf, int endereco)
         {
             string query = String.Empty;
 
@@ -32,24 +33,16 @@ namespace Infrastructure.ConsultoriaMedico.Repository
             {
                 using (connection = new OleDbConnection(connectionString))
                 {
-                    using (OleDbCommand command = new OleDbCommand(query))
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
-                        command.Parameters.Add(nome);
-                        command.Parameters.Add(cpf);
-                        command.Parameters.Add(endereco);
+                        command.Parameters.Add(new OleDbParameter("?", nome));
+                        command.Parameters.Add(new OleDbParameter("?", cpf));
+                        command.Parameters.Add(new OleDbParameter("?", endereco));
 
                         connection.Open();
                         object result = command.ExecuteScalar();
                         connection.Close();
-                        int value;
-                        if (int.TryParse(result.ToString(), out value))
-                        {
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
-                        }
+                        return int.Parse(result.ToString());
                     }
                 }
             }
@@ -63,47 +56,41 @@ namespace Infrastructure.ConsultoriaMedico.Repository
         {
             string query = String.Empty;
 
-            query += Environment.NewLine + "INSERT INTO ENDERECO(";
-            query += Environment.NewLine + "    LOGRADOURO,      ";
-            query += Environment.NewLine + "    NUMERO,          ";
-            query += Environment.NewLine + "    CEP,             ";
-            query += Environment.NewLine + "    BAIRRO,          ";
-            query += Environment.NewLine + "    CIDADE,          ";
-            query += Environment.NewLine + "    ESTADO           ";
-            query += Environment.NewLine + ") VALUES(            ";
-	        query += Environment.NewLine + "    ?,               ";
-            query += Environment.NewLine + "    ?,               ";
-            query += Environment.NewLine + "    ?,               ";
-            query += Environment.NewLine + "    ?,               ";
-            query += Environment.NewLine + "    ?,               ";
-            query += Environment.NewLine + "    ?                ";
-            query += Environment.NewLine + ")                    ";
+            query += Environment.NewLine + "INSERT INTO ENDERECO (";
+            query += Environment.NewLine + "    LOGRADOURO,       ";
+            query += Environment.NewLine + "    NUMERO,           ";
+            query += Environment.NewLine + "    CEP,              ";
+            query += Environment.NewLine + "    BAIRRO,           ";
+            query += Environment.NewLine + "    CIDADE,           ";
+            query += Environment.NewLine + "    ESTADO            ";
+            query += Environment.NewLine + ") VALUES(             ";
+	        query += Environment.NewLine + "    ?,                ";
+            query += Environment.NewLine + "    ?,                ";
+            query += Environment.NewLine + "    ?,                ";
+            query += Environment.NewLine + "    ?,                ";
+            query += Environment.NewLine + "    ?,                ";
+            query += Environment.NewLine + "    ?                 ";
+            query += Environment.NewLine + ")                     ";
 
             try
             {
                 using (connection = new OleDbConnection(connectionString))
                 {
-                    using (OleDbCommand command = new OleDbCommand(query))
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
-                        command.Parameters.Add(logradouro);
-                        command.Parameters.Add(numero);
-                        command.Parameters.Add(cep);
-                        command.Parameters.Add(bairro);
-                        command.Parameters.Add(cidade);
-                        command.Parameters.Add(estado);
-
                         connection.Open();
-                        object result = command.ExecuteScalar();
+
+                        command.Parameters.Add(new OleDbParameter("LOGRADOURO", logradouro));
+                        command.Parameters.Add(new OleDbParameter("NUMERO", numero));
+                        command.Parameters.Add(new OleDbParameter("CEP", cep));
+                        command.Parameters.Add(new OleDbParameter("BAIRRO", bairro));
+                        command.Parameters.Add(new OleDbParameter("CIDADE", cidade));
+                        command.Parameters.Add(new OleDbParameter("ESTADO", estado));
+
+                        object obj = command.ExecuteScalar();
+
                         connection.Close();
-                        int value;
-                        if (int.TryParse(result.ToString(), out value))
-                        {
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
-                        }
+                        return true;
                     }
                 }
             }
@@ -114,7 +101,7 @@ namespace Infrastructure.ConsultoriaMedico.Repository
 
         }
 
-        public static bool insertPeoplePhone(int idPessoa, int idTelefone)
+        public static int insertPeoplePhone(int idPessoa, int idTelefone)
         {
             String query = String.Empty;
             query += Environment.NewLine + "INSERT INTO PESSOA_TELEFONE(";
@@ -129,23 +116,15 @@ namespace Infrastructure.ConsultoriaMedico.Repository
             {
                 using (connection = new OleDbConnection(connectionString))
                 {
-                    using (OleDbCommand command = new OleDbCommand(query))
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
-                        command.Parameters.Add(idPessoa);
-                        command.Parameters.Add(idTelefone);
+                        command.Parameters.Add(new OleDbParameter("?", idPessoa));
+                        command.Parameters.Add(new OleDbParameter("?", idTelefone));
 
                         connection.Open();
-                        object result = command.ExecuteScalar();
+                        object id = command.ExecuteScalar();
                         connection.Close();
-                        int value;
-                        if (int.TryParse(result.ToString(), out value))
-                        {
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
-                        }
+                        return int.Parse(id.ToString());
                     }
                 }
             }
@@ -173,24 +152,16 @@ namespace Infrastructure.ConsultoriaMedico.Repository
             {
                 using (connection = new OleDbConnection(connectionString))
                 {
-                    using (OleDbCommand command = new OleDbCommand(query))
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
-                        command.Parameters.Add(numero);
-                        command.Parameters.Add(ddd);
-                        command.Parameters.Add(tipo);
-
                         connection.Open();
-                        object result = command.ExecuteScalar();
+
+                        command.Parameters.Add(new OleDbParameter("?", numero));
+                        command.Parameters.Add(new OleDbParameter("?", ddd));
+                        command.Parameters.Add(new OleDbParameter("?", tipo));
+                        command.ExecuteNonQuery();
                         connection.Close();
-                        int value;
-                        if (int.TryParse(result.ToString(), out value))
-                        {
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
-                        }
+                        return true;
                     }
                 }
             }

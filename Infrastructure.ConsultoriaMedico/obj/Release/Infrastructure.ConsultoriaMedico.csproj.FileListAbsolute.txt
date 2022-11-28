@@ -1,6 +1,0 @@
-D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\bin\Release\Infrastructure.ConsultoriaMedico.dll
-D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\bin\Release\Infrastructure.ConsultoriaMedico.pdb
-D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\obj\Release\Infrastructure.ConsultoriaMedico.csproj.AssemblyReference.cache
-D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\obj\Release\Infrastructure.ConsultoriaMedico.csproj.CoreCompileInputs.cache
-D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\obj\Release\Infrastructure.ConsultoriaMedico.dll
-D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\obj\Release\Infrastructure.ConsultoriaMedico.pdb

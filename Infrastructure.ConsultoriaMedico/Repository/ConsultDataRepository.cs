@@ -47,7 +47,6 @@ namespace Infrastructure.ConsultoriaMedico.Repository
 
             try
             {
-                
                 List<ConsultDataResponse> list = new List<ConsultDataResponse>();
 				using (connection = new OleDbConnection(connectionString))
 				{
@@ -59,20 +58,20 @@ namespace Infrastructure.ConsultoriaMedico.Repository
                             while (reader.Read())
                             {
                                 ConsultDataResponse consult = new ConsultDataResponse();
-                                consult.ID = int.Parse(reader[0].ToString());
+                                consult.ID = Int64.Parse(reader[0].ToString());
                                 consult.NOME = reader[1].ToString();
-                                consult.CPF = int.Parse(reader[2].ToString());
-                                consult.ID_ENDERECO = int.Parse(reader[3].ToString());
+                                consult.CPF = Int64.Parse(reader[2].ToString());
+                                consult.ID_ENDERECO = Int64.Parse(reader[3].ToString());
                                 consult.LOGRADOURO = reader[4].ToString();
-                                consult.NUMERO = int.Parse(reader[5].ToString());
-                                consult.CEP = int.Parse(reader[6].ToString());
+                                consult.NUMERO = Int64.Parse(reader[5].ToString());
+                                consult.CEP = Int64.Parse(reader[6].ToString());
                                 consult.BAIRRO = reader[7].ToString();
                                 consult.CIDADE = reader[8].ToString();
                                 consult.ESTADO = reader[9].ToString();
-                                consult.ID_TELEFONE = int.Parse(reader[10].ToString());
-                                consult.DDD = int.Parse(reader[11].ToString());
-                                consult.NUMERO_TELEFONE = int.Parse(reader[12].ToString());
-                                consult.ID_TIPO = int.Parse(reader[13].ToString());
+                                consult.ID_TELEFONE = Int64.Parse(reader[10].ToString());
+                                consult.DDD = Int64.Parse(reader[11].ToString());
+                                consult.NUMERO_TELEFONE = Int64.Parse(reader[12].ToString());
+                                consult.ID_TIPO = Int64.Parse(reader[13].ToString());
                                 consult.TIPO = reader[14].ToString();
 
                                 list.Add(consult);

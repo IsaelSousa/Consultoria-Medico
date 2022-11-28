@@ -69,7 +69,7 @@ namespace Infrastructure.ConsultoriaMedico.Repository
 
             using (connection = new OleDbConnection(connectionString))
             {
-                using (OleDbCommand command = new OleDbCommand(query))
+                using (OleDbCommand command = new OleDbCommand(query, connection))
                 {
                     command.Parameters.Add(userID);
                     command.Parameters.Add(phoneID);
@@ -96,22 +96,14 @@ namespace Infrastructure.ConsultoriaMedico.Repository
 
             using (connection = new OleDbConnection(connectionString))
             {
-                using (OleDbCommand command = new OleDbCommand(query))
+                using (OleDbCommand command = new OleDbCommand(query, connection))
                 {
                     command.Parameters.Add(phoneID);
 
                     connection.Open();
                     object result = command.ExecuteScalar();
                     connection.Close();
-                    int value;
-                    if (int.TryParse(result.ToString(), out value))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+                    return true;
                 }
             }
         }

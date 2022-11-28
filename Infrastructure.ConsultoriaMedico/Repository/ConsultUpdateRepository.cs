@@ -27,7 +27,7 @@ namespace Infrastructure.ConsultoriaMedico.Repository
             {
                 using (connection = new OleDbConnection(connectionString))
                 {
-                    using (OleDbCommand command = new OleDbCommand(query))
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
                         command.Parameters.Add(name);
                         command.Parameters.Add(cpf);
@@ -71,7 +71,7 @@ namespace Infrastructure.ConsultoriaMedico.Repository
             {
                 using (connection = new OleDbConnection(connectionString))
                 {
-                    using (OleDbCommand command = new OleDbCommand(query))
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
                         command.Parameters.Add(logradouro);
                         command.Parameters.Add(numero);
@@ -116,7 +116,7 @@ namespace Infrastructure.ConsultoriaMedico.Repository
             {
                 using (connection = new OleDbConnection(connectionString))
                 {
-                    using (OleDbCommand command = new OleDbCommand(query))
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
                         command.Parameters.Add(numero);
                         command.Parameters.Add(ddd);
@@ -126,15 +126,7 @@ namespace Infrastructure.ConsultoriaMedico.Repository
                         connection.Open();
                         object result = command.ExecuteScalar();
                         connection.Close();
-                        int value;
-                        if (int.TryParse(result.ToString(), out value))
-                        {
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
-                        }
+                        return true;
                     }
                 }
             }

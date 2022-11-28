@@ -1,9 +1,0 @@
-D:\www\csharp\Consultoria Médico\Application.ConsultoriaMedico\obj\Release\net6.0\PubTmp\Out\Application.ConsultoriaMedico.exe
-D:\www\csharp\Consultoria Médico\Application.ConsultoriaMedico\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
-D:\www\csharp\Consultoria Médico\Application.ConsultoriaMedico\obj\Release\net6.0\PubTmp\Out\appsettings.json
-D:\www\csharp\Consultoria Médico\Application.ConsultoriaMedico\obj\Release\net6.0\PubTmp\Out\Application.ConsultoriaMedico.dll
-D:\www\csharp\Consultoria Médico\Application.ConsultoriaMedico\obj\Release\net6.0\PubTmp\Out\Application.ConsultoriaMedico.deps.json
-D:\www\csharp\Consultoria Médico\Application.ConsultoriaMedico\obj\Release\net6.0\PubTmp\Out\Application.ConsultoriaMedico.runtimeconfig.json
-D:\www\csharp\Consultoria Médico\Application.ConsultoriaMedico\obj\Release\net6.0\PubTmp\Out\Application.ConsultoriaMedico.pdb
-D:\www\csharp\Consultoria Médico\Application.ConsultoriaMedico\obj\Release\net6.0\PubTmp\Out\Infrastructure.ConsultoriaMedico.dll
-D:\www\csharp\Consultoria Médico\Application.ConsultoriaMedico\obj\Release\net6.0\PubTmp\Out\Infrastructure.ConsultoriaMedico.pdb
