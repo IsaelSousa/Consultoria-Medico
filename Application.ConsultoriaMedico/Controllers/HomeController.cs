@@ -1,7 +1,7 @@
 ﻿using ConsultoriaMedico.Command;
 using Application.ConsultoriaMedico.Models;
-using Insfraestrutura.ConsultoriaMedico.Model;
-using Insfraestrutura.ConsultoriaMedico.Repository;
+using Infrastructure.ConsultoriaMedico.Model;
+using Infrastructure.ConsultoriaMedico.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -33,6 +33,7 @@ namespace ConsultoriaMedico.Controllers
         }
 
         [HttpGet()]
+        [Route("GetConsultData")]
         public List<ConsultDataResponse> GetConsultData()
         {
             return PessoaDAO.ConsultDataPeople();

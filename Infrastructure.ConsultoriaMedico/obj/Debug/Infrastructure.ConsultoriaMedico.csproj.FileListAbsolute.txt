@@ -4,3 +4,8 @@ D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\bin\Debug\Inf
 D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\bin\Debug\Infrastructure.ConsultoriaMedico.pdb
 D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\obj\Debug\Infrastructure.ConsultoriaMedico.dll
 D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\obj\Debug\Infrastructure.ConsultoriaMedico.pdb
+D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\bin\Debug\System.Data.OleDb.dll
+D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\bin\Debug\System.Data.OleDb.xml
+D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\obj\Debug\Infrastructure.ConsultoriaMedico.csproj.CopyComplete
+D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\bin\Debug\System.Data.SqlClient.dll
+D:\www\csharp\Consultoria Médico\Infrastructure.ConsultoriaMedico\bin\Debug\System.Data.SqlClient.xml

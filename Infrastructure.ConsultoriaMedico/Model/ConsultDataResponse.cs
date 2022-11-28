@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Insfraestrutura.ConsultoriaMedico.Model
+namespace Infrastructure.ConsultoriaMedico.Model
 {
     public class ConsultDataResponse
     {
@@ -23,6 +23,5 @@ namespace Insfraestrutura.ConsultoriaMedico.Model
         public int NUMERO_TELEFONE { get; set; }
         public int ID_TIPO { get; set; }
         public string TIPO { get; set; }
-
     }
 }

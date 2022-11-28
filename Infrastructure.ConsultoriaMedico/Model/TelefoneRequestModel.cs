@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Insfraestrutura.ConsultoriaMedico.Model
+namespace Infrastructure.ConsultoriaMedico.Model
 {
     public class TelefoneRequestModel
     {

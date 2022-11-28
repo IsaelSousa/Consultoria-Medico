@@ -1,7 +1,7 @@
 ﻿using ConsultoriaMedico.Model;
 using Infrastructure.ConsultoriaMedico.Repository;
-using Insfraestrutura.ConsultoriaMedico.Model;
-using Insfraestrutura.ConsultoriaMedico.Repository;
+using Infrastructure.ConsultoriaMedico.Model;
+using Infrastructure.ConsultoriaMedico.Repository;
 
 namespace ConsultoriaMedico.Command
 {

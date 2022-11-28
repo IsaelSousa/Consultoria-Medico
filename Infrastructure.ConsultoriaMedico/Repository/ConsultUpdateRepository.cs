@@ -1,4 +1,4 @@
-﻿using Insfraestrutura.ConsultoriaMedico.Database;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
@@ -12,6 +12,8 @@ namespace Infrastructure.ConsultoriaMedico.Repository
 {
     public static class ConsultUpdateRepository
     {
+        static string connectionString = Environment.GetEnvironmentVariable("connectionString");
+        static OleDbConnection connection;
         public static bool UpdatePeople(string name, int cpf, int id)
         {
             string query = String.Empty;
@@ -23,23 +25,26 @@ namespace Infrastructure.ConsultoriaMedico.Repository
 
             try
             {
-                using (OleDbCommand command = new OleDbCommand(query))
+                using (connection = new OleDbConnection(connectionString))
                 {
-                    command.Parameters.Add(name);
-                    command.Parameters.Add(cpf);
-                    command.Parameters.Add(id);
+                    using (OleDbCommand command = new OleDbCommand(query))
+                    {
+                        command.Parameters.Add(name);
+                        command.Parameters.Add(cpf);
+                        command.Parameters.Add(id);
 
-                    Connection.OpenConnection();
-                    object result = command.ExecuteScalar();
-                    Connection.CloseConnection();
-                    int value;
-                    if (int.TryParse(result.ToString(), out value))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+                        connection.Close();
+                        int value;
+                        if (int.TryParse(result.ToString(), out value))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
                     }
                 }
             }
@@ -64,27 +69,30 @@ namespace Infrastructure.ConsultoriaMedico.Repository
 
             try
             {
-                using (OleDbCommand command = new OleDbCommand(query))
+                using (connection = new OleDbConnection(connectionString))
                 {
-                    command.Parameters.Add(logradouro);
-                    command.Parameters.Add(numero);
-                    command.Parameters.Add(cep);
-                    command.Parameters.Add(bairro);
-                    command.Parameters.Add(cidade);
-                    command.Parameters.Add(estado);
-                    command.Parameters.Add(id);
+                    using (OleDbCommand command = new OleDbCommand(query))
+                    {
+                        command.Parameters.Add(logradouro);
+                        command.Parameters.Add(numero);
+                        command.Parameters.Add(cep);
+                        command.Parameters.Add(bairro);
+                        command.Parameters.Add(cidade);
+                        command.Parameters.Add(estado);
+                        command.Parameters.Add(id);
 
-                    Connection.OpenConnection();
-                    object result = command.ExecuteScalar();
-                    Connection.CloseConnection();
-                    int value;
-                    if (int.TryParse(result.ToString(), out value))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+                        connection.Close();
+                        int value;
+                        if (int.TryParse(result.ToString(), out value))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
                     }
                 }
             }
@@ -106,24 +114,27 @@ namespace Infrastructure.ConsultoriaMedico.Repository
 
             try
             {
-                using (OleDbCommand command = new OleDbCommand(query))
+                using (connection = new OleDbConnection(connectionString))
                 {
-                    command.Parameters.Add(numero);
-                    command.Parameters.Add(ddd);
-                    command.Parameters.Add(tipo);
-                    command.Parameters.Add(id);
+                    using (OleDbCommand command = new OleDbCommand(query))
+                    {
+                        command.Parameters.Add(numero);
+                        command.Parameters.Add(ddd);
+                        command.Parameters.Add(tipo);
+                        command.Parameters.Add(id);
 
-                    Connection.OpenConnection();
-                    object result = command.ExecuteScalar();
-                    Connection.CloseConnection();
-                    int value;
-                    if (int.TryParse(result.ToString(), out value))
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+                        connection.Close();
+                        int value;
+                        if (int.TryParse(result.ToString(), out value))
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
                     }
                 }
             }

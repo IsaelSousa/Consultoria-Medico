@@ -1,4 +1,4 @@
-﻿using Insfraestrutura.ConsultoriaMedico.Database;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
@@ -10,25 +10,29 @@ namespace Infrastructure.ConsultoriaMedico.Repository
 {
     public static class ConsultDeleteRepository
     {
+        static string connectionString = Environment.GetEnvironmentVariable("connectionString");
+        static OleDbConnection connection;
         public static bool DeletePeoples(int userID)
         {
             string query = "DELETE FROM PESSOA WHERE ID = ?";
 
-            using (OleDbCommand command = new OleDbCommand(query))
+            using (connection = new OleDbConnection(connectionString))
             {
-                command.Parameters.Add(userID);
-
-                Connection.OpenConnection();
-                object result = command.ExecuteScalar();
-                Connection.CloseConnection();
-                int value;
-                if (int.TryParse(result.ToString(), out value))
+                connection.Open();
+                using (OleDbCommand command = new OleDbCommand(query))
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    command.Parameters.Add(userID);
+                    object result = command.ExecuteScalar();
+                    connection.Close();
+                    int value;
+                    if (int.TryParse(result.ToString(), out value))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
         }
@@ -37,21 +41,24 @@ namespace Infrastructure.ConsultoriaMedico.Repository
         {
             string query = "DELETE FROM ENDERECO WHERE ID = ?";
 
-            using (OleDbCommand command = new OleDbCommand(query))
+            using (connection = new OleDbConnection(connectionString))
             {
-                command.Parameters.Add(addressID);
+                connection.Open();
 
-                Connection.OpenConnection();
-                object result = command.ExecuteScalar();
-                Connection.CloseConnection();
-                int value;
-                if (int.TryParse(result.ToString(), out value))
+                using (OleDbCommand command = new OleDbCommand(query))
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    command.Parameters.Add(addressID);
+                    object result = command.ExecuteScalar();
+                    connection.Close();
+                    int value;
+                    if (int.TryParse(result.ToString(), out value))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
         }
@@ -60,22 +67,25 @@ namespace Infrastructure.ConsultoriaMedico.Repository
         {
             string query = "DELETE FROM PESSOA_TELEFONE WHERE ID_PESSOA = ? AND ID_TELEFONE = ?";
 
-            using (OleDbCommand command = new OleDbCommand(query))
+            using (connection = new OleDbConnection(connectionString))
             {
-                command.Parameters.Add(userID);
-                command.Parameters.Add(phoneID);
+                using (OleDbCommand command = new OleDbCommand(query))
+                {
+                    command.Parameters.Add(userID);
+                    command.Parameters.Add(phoneID);
 
-                Connection.OpenConnection();
-                object result = command.ExecuteScalar();
-                Connection.CloseConnection();
-                int value;
-                if (int.TryParse(result.ToString(), out value))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    connection.Close();
+                    int value;
+                    if (int.TryParse(result.ToString(), out value))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
         }
@@ -84,21 +94,24 @@ namespace Infrastructure.ConsultoriaMedico.Repository
         {
             string query = "DELETE FROM TELEFONE WHERE ID = ?";
 
-            using (OleDbCommand command = new OleDbCommand(query))
+            using (connection = new OleDbConnection(connectionString))
             {
-                command.Parameters.Add(phoneID);
+                using (OleDbCommand command = new OleDbCommand(query))
+                {
+                    command.Parameters.Add(phoneID);
 
-                Connection.OpenConnection();
-                object result = command.ExecuteScalar();
-                Connection.CloseConnection();
-                int value;
-                if (int.TryParse(result.ToString(), out value))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    connection.Close();
+                    int value;
+                    if (int.TryParse(result.ToString(), out value))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
             }
         }
